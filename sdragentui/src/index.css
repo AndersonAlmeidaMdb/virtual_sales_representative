@@ -1,0 +1,204 @@
+:root {
+  --cor-primaria: #25d366;
+  --cor-primaria-escura: #128c7e;
+  --cor-fundo: #e5ddd5;
+  --cor-superficie: #ffffff;
+  --cor-texto: #0f172a;
+  --cor-texto-suave: #475569;
+  --cor-borda: #cbd5e1;
+  --raio: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+header {
+  background: var(--cor-primaria-escura);
+  color: var(--cor-superficie);
+  padding: 1.25rem 2rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  margin: 0;
+  color: #d7f2ea;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  height: calc(100vh - 9rem);
+}
+
+main > section > header {
+  background: var(--cor-primaria-escura);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+}
+
+main > section > header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+main > section > header p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+main > section > header nav {
+  margin-top: 0;
+}
+
+main > section > header button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+[role='alert'] {
+  margin: 0;
+  padding: 0.6rem 1.25rem;
+  background: #fde68a;
+  color: #7c2d12;
+  font-size: 0.85rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--raio);
+  padding: 0.5rem 0.9rem;
+  background: var(--cor-primaria-escura);
+  color: var(--cor-superficie);
+  font-size: 0.9rem;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ---------- Histórico de mensagens (estilo WhatsApp) ---------- */
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--cor-fundo);
+}
+
+ol li {
+  max-width: 75%;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--raio);
+  background: var(--cor-superficie);
+  box-shadow: 0 1px 1px rgba(15, 23, 42, 0.1);
+}
+
+ol li p {
+  margin: 0 0 0.2rem;
+  white-space: pre-wrap;
+}
+
+ol li time {
+  display: block;
+  text-align: right;
+  font-size: 0.7rem;
+  color: var(--cor-texto-suave);
+}
+
+ol li[data-autor='cliente'] {
+  align-self: flex-end;
+  background: #dcf8c6;
+}
+
+ol li[data-autor='sdr'] {
+  align-self: flex-start;
+  background: var(--cor-superficie);
+}
+
+ol li[data-digitando='true'] p {
+  color: var(--cor-texto-suave);
+  font-style: italic;
+}
+
+ol li[data-vazio='true'] {
+  align-self: center;
+  background: transparent;
+  box-shadow: none;
+  color: var(--cor-texto-suave);
+  text-align: center;
+}
+
+/* ---------- Formulário de envio ---------- */
+
+form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.9rem 1.25rem;
+  background: var(--cor-superficie);
+  border-top: 1px solid var(--cor-borda);
+}
+
+form .campo {
+  flex: 1;
+  margin: 0;
+}
+
+form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+form input {
+  width: 100%;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font: inherit;
+}

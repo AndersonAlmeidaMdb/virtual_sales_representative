@@ -1,0 +1,349 @@
+:root {
+  --cor-primaria: #2563eb;
+  --cor-fundo: #f1f5f9;
+  --cor-superficie: #ffffff;
+  --cor-texto: #0f172a;
+  --cor-texto-suave: #475569;
+  --cor-borda: #cbd5e1;
+  --raio: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+header {
+  background: var(--cor-texto);
+  color: var(--cor-superficie);
+  padding: 1.5rem 2rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main > section {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+}
+
+main > section > h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--cor-borda);
+  padding-bottom: 0.5rem;
+}
+
+h3 small {
+  color: var(--cor-texto-suave);
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--raio);
+  padding: 0.5rem 0.9rem;
+  background: var(--cor-primaria);
+  color: var(--cor-superficie);
+  font-size: 0.9rem;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Menu principal ---------- */
+
+header > nav {
+  margin-top: 1rem;
+}
+
+header > nav button {
+  background: transparent;
+  border: 1px solid #475569;
+}
+
+header > nav button[aria-current='page'] {
+  background: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+/* ---------- Formulários de CRUD ---------- */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+form .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0;
+}
+
+form label {
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+}
+
+form input,
+form select {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+  min-width: 180px;
+}
+
+form small {
+  color: var(--cor-texto-suave);
+}
+
+form nav {
+  margin-top: 0;
+}
+
+/* ---------- Tabelas de listagem ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+tbody tr:hover {
+  background: var(--cor-fundo);
+}
+
+td nav {
+  margin-top: 0;
+}
+
+/* ---------- Toast de notificação ---------- */
+
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  padding: 0.75rem 1rem;
+  border-radius: var(--raio);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+  color: var(--cor-superficie);
+  max-width: 360px;
+}
+
+.toast-sucesso {
+  background: #16a34a;
+}
+
+.toast-erro {
+  background: #dc2626;
+}
+
+/* ---------- Modal de descrição completa do produto ---------- */
+
+.modal-fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.modal {
+  background: var(--cor-superficie);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+  max-width: 560px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.25);
+}
+
+.modal > header {
+  background: none;
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.modal > header h3 {
+  margin: 0;
+}
+
+.modal p {
+  white-space: pre-wrap;
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Bloco de Cadência Diária ---------- */
+
+.blocos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.blocos article {
+  flex: 1 1 240px;
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-primaria);
+  border-radius: var(--raio);
+  padding: 1rem;
+}
+
+.blocos article[data-tipo='Ligacao'] {
+  border-left-color: #d97706;
+}
+
+.blocos article[data-tipo='LinkedIn'] {
+  border-left-color: #0ea5e9;
+}
+
+.blocos article h3 {
+  margin-top: 0;
+}
+
+/* ---------- Funil de Pré-Venda ---------- */
+
+.colunas {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.colunas > section {
+  flex: 1;
+  background: var(--cor-fundo);
+  border-top: 4px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.75rem;
+  min-height: 160px;
+}
+
+.colunas > section[data-estagio='Novo'] {
+  border-top-color: var(--cor-primaria);
+}
+
+.colunas > section[data-estagio='Em Tentativa de Contato'] {
+  border-top-color: #d97706;
+}
+
+.colunas > section[data-estagio='Qualificado'] {
+  border-top-color: #16a34a;
+}
+
+.colunas h3 {
+  margin-top: 0;
+}
+
+.colunas article {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.colunas article:hover {
+  border-color: var(--cor-primaria);
+}
+
+.colunas article h4 {
+  margin: 0 0 0.2rem;
+}
+
+.colunas article p {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.85rem;
+}
+
+/* ---------- Painel de Atendimento Ativo ---------- */
+
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  max-width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--cor-superficie);
+  border-left: 1px solid var(--cor-borda);
+  box-shadow: -4px 0 16px rgba(15, 23, 42, 0.15);
+  padding: 1.25rem;
+}
+
+aside > header {
+  background: none;
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+aside section {
+  margin-bottom: 1.25rem;
+}
+
+aside textarea {
+  width: 100%;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.5rem;
+  font: inherit;
+  resize: vertical;
+}

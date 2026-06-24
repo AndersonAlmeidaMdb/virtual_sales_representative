@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+*/.env
+*.js.map
+resume.txt
+cld.txt
+settings.local.json

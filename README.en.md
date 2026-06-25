@@ -1,4 +1,4 @@
-# 91sdr — AI-Powered SDR Agent
+# Virtual Sales Representative — AI-Powered SDR Agent
 
 CRM + AI virtual SDR system, made up of three apps:
 

@@ -1,12 +1,12 @@
-# 91sdr — SDR Virtual
+# # Virtual Sales Development Representative (vSDR) — Representante de Vendas Virtual
 
-Sistema de CRM + SDR virtual com IA, composto por três apps:
+Sistema de CRM + "SDR" virtual com IA, composto por três apps:
 
 | App | Descrição | Porta padrão |
 |---|---|---|
 | `srdbackend` | API REST (Express + MongoDB) + agente LangGraph | 3000 |
 | `sdrfrontend` | Cockpit do SDR (React/Vite) | 5173 |
-| `sdragentui` | Chat do SDR virtual (React/Vite) | 5174 |
+| `sdragentui` | Chat Frontent do SDR virtual (React/Vite) | 5174 |
 
 ---
 

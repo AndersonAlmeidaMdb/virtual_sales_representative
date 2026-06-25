@@ -10,6 +10,11 @@ Sistema de CRM + "SDR" virtual com IA, composto por três apps:
 
 ---
 
+![Screen shot1](Agent0.png)
+![Screen shot2](Agent1.png)
+
+---
+
 ## Tecnologias
 
 - MongoDB Atlas Database

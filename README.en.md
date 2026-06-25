@@ -10,6 +10,11 @@ CRM + AI virtual SDR system, made up of three apps:
 
 ---
 
+![Screen shot1](Agent0.png)
+![Screen shot2](Agent1.png)
+
+---
+
 ## Technologies
 
 - MongoDB Atlas Database

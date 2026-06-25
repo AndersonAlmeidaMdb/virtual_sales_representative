@@ -10,6 +10,16 @@ CRM + AI virtual SDR system, made up of three apps:
 
 ---
 
+## Technologies
+
+- MongoDB Atlas Database
+- Atlas Vector Search, para RAG com Auto Embeddings
+- Agent com Langgraph
+- Implementação de Memória
+
+
+---
+
 ## Prerequisites
 
 - Node.js 18+
